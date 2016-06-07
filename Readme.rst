@@ -1,8 +1,8 @@
 ========
-Xfilesearch
+Extended Direct Mail
 ========
 
-TYPO3 extension to extend the default file search within metadata for TYPO3 filelist backend modul and the TYPO3 filebrowser functionality, when selecting an image from any content element or other entries.
+TYPO3 extension to extend the EXT:direct_mail. The extension makes it possible to create recipient lists in raw SQL queries.
 
 Installation
 ============
