@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\CMS\XtDirectmail\Hooks;
+namespace Jok\XtDirectmail\Hooks;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -26,8 +26,8 @@ namespace TYPO3\CMS\XtDirectmail\Hooks;
  * # Extend TCA for direct_mail recipients by adding a custom item to attach own query using hook 'cmd_compileMailGroup'
  * $TCA['sys_dmail_group']['columns']['type']['config']['items'][] = array('LLL:EXT:xt_directmail/Resources/Private/Language/locallang.xml:sys_dmail_group.type.I.5', '5');
  * # HOOK must be registered for direct_mail modules 2 & 3 (2 = dmail, 3 = recipient_list)
- * $TYPO3_CONF_VARS['EXTCONF']['direct_mail']['mod2']['getSingleMailGroup'][] = 'EXT:' . $_EXTKEY . '/Classes/Hooks/MailGroupHooks.php:&TYPO3\CMS\XtDirectmail\Hooks\MailGroupHook';
- * $TYPO3_CONF_VARS['EXTCONF']['direct_mail']['mod3']['cmd_compileMailGroup'][] = 'EXT:' . $_EXTKEY . '/Classes/Hooks/MailGroupHooks.php:&TYPO3\CMS\XtDirectmail\Hooks\MailGroupHook';
+ * $TYPO3_CONF_VARS['EXTCONF']['direct_mail']['mod2']['getSingleMailGroup'][] = 'EXT:' . $_EXTKEY . '/Classes/Hooks/MailGroupHooks.php:&Jok\XtDirectmail\Hooks\MailGroupHook';
+ * $TYPO3_CONF_VARS['EXTCONF']['direct_mail']['mod3']['cmd_compileMailGroup'][] = 'EXT:' . $_EXTKEY . '/Classes/Hooks/MailGroupHooks.php:&Jok\XtDirectmail\Hooks\MailGroupHook';
  *.
  * @author JKummer <typo3 et enobe de>
  *

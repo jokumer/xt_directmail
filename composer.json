@@ -1,0 +1,29 @@
+{
+  "name": "jok/xt_directmail",
+  "type": "typo3-cms-extension",
+  "description": "Extended configurations for directmail extension",
+  "version": "1.0.1",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "directmail"
+  ],
+  "support": {
+    "issues": "https://github.com/jokumer/xt_directmail/issues"
+  },
+  "authors": [
+    {
+      "name": "J.Kummer",
+      "email": "typo3 et enobe de"
+    }
+  ],
+  "license": "GPL-3.0",
+  "require": {
+    "typo3/cms-core": "^7.6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jok\\XtDirectmail\\": "Classes"
+    }
+  }
+}

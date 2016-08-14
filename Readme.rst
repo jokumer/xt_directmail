@@ -27,7 +27,7 @@ Description
 ===========
 
 
-27-05-2016 JKummer
+14-08-2016 JKummer
 
 Extends direct_mail to create recipientlist with raw sql query
 
