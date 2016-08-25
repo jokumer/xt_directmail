@@ -1,5 +1,5 @@
 {
-  "name": "jok/xt_directmail",
+  "name": "jok/xt-directmail",
   "type": "typo3-cms-extension",
   "description": "Extended configurations for directmail extension",
   "version": "1.0.1",
