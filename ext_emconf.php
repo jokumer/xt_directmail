@@ -16,7 +16,7 @@ $EM_CONF[$_EXTKEY] = array(
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
     'lockType' => '',
-    'version' => '1.0.1',
+    'version' => '1.0.2',
     'constraints' => array(
         'depends' => array(
             'typo3' => '7.6.0-7.99.99',
@@ -26,7 +26,7 @@ $EM_CONF[$_EXTKEY] = array(
     ),
     'autoload' => array(
         'psr-4' => array(
-            'Jok\\XtDirectmail\\' => 'Classes',
+            'Jokumer\\XtDirectmail\\' => 'Classes',
         ),
     ),
 );

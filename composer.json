@@ -1,8 +1,8 @@
 {
-  "name": "jok/xt-directmail",
+  "name": "jokumer/xt-directmail",
   "type": "typo3-cms-extension",
   "description": "Extended configurations for directmail extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [
     "TYPO3",
     "extension",
@@ -23,7 +23,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Jok\\XtDirectmail\\": "Classes"
+      "Jokumer\\XtDirectmail\\": "Classes"
     }
   }
 }

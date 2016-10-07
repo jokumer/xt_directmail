@@ -1,5 +1,5 @@
 <?php
-namespace Jok\XtDirectmail\Xclass;
+namespace Jokumer\XtDirectmail\Xclass;
 
 /*
  * This file is part of the TYPO3 CMS project.
