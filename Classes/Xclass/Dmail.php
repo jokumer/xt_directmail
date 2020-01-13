@@ -1,19 +1,6 @@
 <?php
 namespace Jokumer\XtDirectmail\Xclass;
 
-/*
- * This file is part of the TYPO3 CMS project.
- *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * The TYPO3 project - inspiring people to share!
- */
-
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use DirectMailTeam\DirectMail\DirectMailUtility;
@@ -22,10 +9,11 @@ use DirectMailTeam\DirectMail\DirectMailUtility;
  * Xclass Direct mail Module of the tx_directmail extension
  * See <http://forge.typo3.org/issues/36467>
  *
- * @author JKummer <typo3 et enobe de>
+ * @author J. Kummer
  *
  * @package TYPO3
  * @subpackage xt_directmail
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
 class Dmail extends \DirectMailTeam\DirectMail\Module\Dmail
 {
@@ -66,27 +54,27 @@ class Dmail extends \DirectMailTeam\DirectMail\Module\Dmail
                                 }
                             }
                         }
-                            // Remove any duplicates
+                        // Remove any duplicates
                         $pageIdArray = array_unique($pageIdArray);
                         $pidList = implode(',', $pageIdArray);
                         $info['recursive'] = $mailGroup['recursive'];
 
-                            // Make queries
+                        // Make queries
                         if ($pidList) {
                             $whichTables = intval($mailGroup['whichtables']);
-                            if ($whichTables&1) {
+                            if ($whichTables & 1) {
                                 // tt_address
                                 $idLists['tt_address'] = DirectMailUtility::getIdList('tt_address', $pidList, $groupUid, $mailGroup['select_categories']);
                             }
-                            if ($whichTables&2) {
+                            if ($whichTables & 2) {
                                 // fe_users
                                 $idLists['fe_users'] = DirectMailUtility::getIdList('fe_users', $pidList, $groupUid, $mailGroup['select_categories']);
                             }
-                            if ($this->userTable && ($whichTables&4)) {
+                            if ($this->userTable && ($whichTables & 4)) {
                                 // user table
                                 $idLists[$this->userTable] = DirectMailUtility::getIdList($this->userTable, $pidList, $groupUid, $mailGroup['select_categories']);
                             }
-                            if ($whichTables&8) {
+                            if ($whichTables & 8) {
                                 // fe_groups
                                 if (!is_array($idLists['fe_users'])) {
                                     $idLists['fe_users'] = array();
@@ -97,7 +85,7 @@ class Dmail extends \DirectMailTeam\DirectMail\Module\Dmail
                         break;
                     case 1:
                         // List of mails
-                        if ($mailGroup['csv']==1) {
+                        if ($mailGroup['csv'] == 1) {
                             $recipients = DirectMailUtility::rearrangeCsvValues(DirectMailUtility::getCsvValues($mailGroup['list']), $this->fieldList);
                         } else {
                             $recipients = DirectMailUtility::rearrangePlainMails(array_unique(preg_split('|[[:space:],;]+|', $mailGroup['list'])));
@@ -118,11 +106,11 @@ class Dmail extends \DirectMailTeam\DirectMail\Module\Dmail
                         $mailGroup = $this->update_SpecialQuery($mailGroup);
                         $whichTables = intval($mailGroup['whichtables']);
                         $table = '';
-                        if ($whichTables&1) {
+                        if ($whichTables & 1) {
                             $table = 'tt_address';
-                        } elseif ($whichTables&2) {
+                        } elseif ($whichTables & 2) {
                             $table = 'fe_users';
-                        } elseif ($this->userTable && ($whichTables&4)) {
+                        } elseif ($this->userTable && ($whichTables & 4)) {
                             $table = $this->userTable;
                         }
                         if ($table) {
@@ -153,7 +141,7 @@ class Dmail extends \DirectMailTeam\DirectMail\Module\Dmail
             if (is_array ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['direct_mail']['mod2']['getSingleMailGroup'])) {
                 $hookObjectsArr = array();
                 foreach ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['direct_mail']['mod2']['getSingleMailGroup'] as $classRef) {
-                    $hookObjectsArr[] = &GeneralUtility::getUserObj($classRef);
+                    $hookObjectsArr[] = &GeneralUtility::makeInstance($classRef);
                 }
                 foreach($hookObjectsArr as $hookObj)    {
                     if (method_exists($hookObj, 'cmd_compileMailGroup_postProcess')) {

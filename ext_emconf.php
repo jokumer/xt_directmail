@@ -1,32 +1,22 @@
 <?php
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF['xt_directmail'] = [
     'title' => 'Directmail recipients - extends EXT:direct_mail',
     'description' => 'Extended configurations for directmail extension. See README.',
     'category' => '',
-    'author' => 'Joerg kummer',
-    'author_email' => 'typo3 et enobe dot de',
-    'author_company' => 'enobe.de',
-    'shy' => '',
-    'priority' => '',
-    'module' => '',
+    'author' => 'J. Kummer',
     'state' => 'stable',
-    'internal' => '',
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'modify_tables' => '',
-    'clearCacheOnLoad' => 0,
-    'lockType' => '',
-    'version' => '1.0.2',
-    'constraints' => array(
-        'depends' => array(
-            'typo3' => '7.6.0-7.99.99',
-        ),
-        'conflicts' => array(),
-        'suggests' => array(),
-    ),
-    'autoload' => array(
-        'psr-4' => array(
+    'version' => '1.1.0',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '8.7.0-9.5.99',
+            'directmail' => '8.7.0-9.5.99',
+        ],
+        'conflicts' => [],
+        'suggests' => [],
+    ],
+    'autoload' => [
+        'psr-4' => [
             'Jokumer\\XtDirectmail\\' => 'Classes',
-        ),
-    ),
-);
+        ],
+    ],
+];

@@ -2,7 +2,6 @@
   "name": "jokumer/xt-directmail",
   "type": "typo3-cms-extension",
   "description": "Extended configurations for directmail extension",
-  "version": "1.0.2",
   "keywords": [
     "TYPO3",
     "extension",
@@ -17,9 +16,9 @@
       "email": "typo3@enobe.de"
     }
   ],
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "require": {
-    "typo3/cms-core": "^7.6.0"
+    "typo3/cms-core": "^8.7.0 || ^9.5.0"
   },
   "autoload": {
     "psr-4": {
