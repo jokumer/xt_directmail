@@ -9,7 +9,7 @@ $EM_CONF['xt_directmail'] = [
     'constraints' => [
         'depends' => [
             'typo3' => '8.7.0-9.5.99',
-            'directmail' => '8.7.0-9.5.99',
+            'directmail' => '5.2.0-6.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],

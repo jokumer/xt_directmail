@@ -1,6 +1,5 @@
 <?php
-
-if (!defined ('TYPO3_MODE')) die ('Access denied.');
+defined('TYPO3_MODE') || die('Access denied.');
 
 /**
  * XClass Dmail class to insert hook. See <http://forge.typo3.org/issues/36467>
