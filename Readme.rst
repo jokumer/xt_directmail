@@ -30,13 +30,6 @@ Description
 ===========
 
 
-14-08-2016 JKummer
+2016-2020 JKummer
 
 Extends direct_mail to create recipientlist with raw sql query
-
-XClass EXT:direct_mail version 6.0.0-dev
-http://forge.typo3.org/issues/36467
-
-
-
-
